@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+  }
+
+nav .navbar-brand
+{
+    /* size for brand */
+    font-size: 100%;
+    height:50%;
+    text-align:center
+}
+
+/* colors for brand */
+nav .navbar-brand .blue
+{
+    color: #537fbe;
+}
+nav .navbar-brand .red
+{
+    color: #ea433b;
+}
+nav .navbar-brand .yellow
+{
+    color: #f5b82e;
+}
+nav .navbar-brand .green
+{
+    color: #2e944b;
+}
+
+main .form-control
+{
+    /* center form controls */
+    display: inline-block;
+
+    /* override Bootstrap's 100% width for form controls */
+    width: auto;
+}
+
+main
+{
+    /* scroll horizontally as needed */
+    overflow-x: auto;
+    size: 100%;
+    /* center contents */
+    text-align: center;
+}
+
+main img
+{
+    /* constrain images on small screens */
+    max-width: 100%;
+}
+
+h1
+{
+    font-size: 100%;
+}
+
+.emerald{
+    color:forestgreen
+}
+
+.olive{
+    background-color:olive;
+}
+
+.card
+{
+    width: 80%;
+    height: 80%;
+    position: relative;
+    cursor: pointer;
+    justify-content: space-between;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow:hidden;
+    border-radius: 10px;
+}
+
+.card .left_container{
+    width:48%;
+    height: 100%;
+    background-color: white;
+    flex-direction: row;
+    border-radius: 10px;
+}
+
+.card .left_container img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.card .right_container{
+    position: absolute;
+    left:50%;
+    width:48%;
+    height: 100%;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.card .right_container p {
+    margin-left: 16px;
+}
+.btn {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 30px;
+    height: 30px;
+    appearance: none;
+    -webkit-appearance: none;
+    background:lightsteelblue;
+    z-index: 10;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: #444;
+}
+.btn::before{
+    content: "▲";
+    position: absolute;
+    font-family: 'Font Awesome 5 Free';
+    color: white;
+    font-weight: 700;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%) rotate(-90deg);
+}
+
+.btn:checked:before{
+    content: "►";
+    transform: translate(-50%,-50%) rotate(0deg);
+}
+.btn:checked:after{
+    background: navy;
+}
+
+
+.slide {
+    position: absolute;
+    background-color:darkolivegreen;
+    color:white;
+    right:0;
+    width: 48%;
+    height: 100%;
+    align-items: start;
+    border-radius: 10px;
+    flex-direction: column;
+    transform: translate(100%);
+    transition: all 0.5s;
+}
+
+table{
+    border: 1;
+}
+
+
+
+.slide .skill {
+    min-width: 80px;
+    border: 3%;
+    
+    color:beige;
+}
+
+a{
+    text-decoration: none;
+}
+
+.btn:checked ~ .slide{
+    transform: translate(0%);
+}
+
+
+.panel
+{
+    font-size: 50px;
+    height: 150px;
+    font-weight: normal;
+    letter-spacing: 3px;
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+    text-shadow: #444 0 1px 1px;
+    font-size: xx-large;
+}
+
+.red
+{
+    background-color: darkred;
+    color: white;
+}
+
+div .panel .emerald
+{
+    color: Tropical Rain Forest;
+}
+
+grid-container{
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-gap: 5% 5%;
+}
+
+.icon img{
+    width: 20%;
+    height: 20%;
+    border-radius: 50%;    
+}
+
+.icon-small{
+    height: 100%;
+    width: 5vh;
+}
+
+.rounded {
+    border-radius: 100%;
+}
