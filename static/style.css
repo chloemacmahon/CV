@@ -4,6 +4,62 @@
     padding: 0;
   }
 
+body{
+    --theme-background-colour-dark: black;
+    --theme-background-colour-light: cadetblue;
+    --theme-background-colour-accent: burlywood;
+}
+body[data-theme="red-green"]{
+    --theme-background-colour-dark: darkred;
+    --theme-background-colour-light: olive;
+    --theme-background-colour-accent: darkkhaki;
+}
+
+body[data-theme="yellow-blue"]{
+    --theme-background-colour-dark: navy;
+    --theme-background-colour-light: khaki;
+    --theme-background-colour-accent: goldenrod;
+}
+
+body[data-theme="pink-blue"]{
+    --theme-background-colour-dark: cornflowerblue;
+    --theme-background-colour-light: lightsalmon;
+    --theme-background-colour-accent: indianred;
+}
+
+body[data-theme="purple-teal"]{
+    --theme-background-colour-dark: darkmagenta;
+    --theme-background-colour-light: cadetblue;
+    --theme-background-colour-accent: darkslategrey;
+} 
+
+.dark{
+    background-color: var(--theme-background-colour-dark);
+    color:white;
+}
+
+.light{
+    background-color: var(--theme-background-colour-light);
+    color: var(--theme-background-colour-dark);
+}
+
+.accent{
+    background-color: var(--theme-background-colour-accent);
+    color: white;
+}
+
+.dark-font{
+    color: var(--theme-background-colour-dark);
+}
+
+.light-font{
+    color: var(--theme-background-colour-light);
+}
+
+.accent-font{
+    color: var(--theme-background-colour-accent);
+}
+
 nav .navbar-brand
 {
     /* size for brand */
@@ -12,23 +68,6 @@ nav .navbar-brand
     text-align:center
 }
 
-/* colors for brand */
-nav .navbar-brand .blue
-{
-    color: #537fbe;
-}
-nav .navbar-brand .red
-{
-    color: #ea433b;
-}
-nav .navbar-brand .yellow
-{
-    color: #f5b82e;
-}
-nav .navbar-brand .green
-{
-    color: #2e944b;
-}
 
 main .form-control
 {
@@ -57,14 +96,6 @@ main img
 h1
 {
     font-size: 100%;
-}
-
-.emerald{
-    color:forestgreen
-}
-
-.olive{
-    background-color:olive;
 }
 
 .card
@@ -99,7 +130,6 @@ h1
     left:50%;
     width:48%;
     height: 100%;
-    background-color: white;
     border-radius: 10px;
 }
 
@@ -115,7 +145,7 @@ h1
     height: 30px;
     appearance: none;
     -webkit-appearance: none;
-    background:lightsteelblue;
+    background:var(--theme-background-colour-dark);
     z-index: 10;
     border-radius: 50%;
     cursor: pointer;
@@ -137,14 +167,11 @@ h1
     transform: translate(-50%,-50%) rotate(0deg);
 }
 .btn:checked:after{
-    background: navy;
+    background: var(--theme-background-colour-light);
 }
-
 
 .slide {
     position: absolute;
-    background-color:darkolivegreen;
-    color:white;
     right:0;
     width: 48%;
     height: 100%;
@@ -189,17 +216,6 @@ a{
     font-size: xx-large;
 }
 
-.red
-{
-    background-color: darkred;
-    color: white;
-}
-
-div .panel .emerald
-{
-    color: Tropical Rain Forest;
-}
-
 grid-container{
     display: grid;
     grid-auto-columns: 1fr;
@@ -207,16 +223,78 @@ grid-container{
 }
 
 .icon img{
-    width: 20%;
     height: 20%;
+    width: 7vh;
     border-radius: 50%;    
 }
 
 .icon-small{
     height: 100%;
-    width: 5vh;
+    width: 4vh;
 }
 
 .rounded {
     border-radius: 100%;
+}
+
+.progress-bar {
+    border: 1px;
+}
+
+.theme .btn {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 30px;
+    height: 30px;
+    margin-top: 1em;
+    background:var(--theme-background-colour-dark);
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: #444;
+    transition: all .4s;
+}
+
+.theme{
+    width: 100px;
+    height: 50px;
+    position: absolute;
+    top: 50%;
+    left:-5px;
+    transform: translate(-50%);
+    border-radius: 10%;
+    overflow: hidden;
+}
+
+.theme .box{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    background: var(--theme-background-colour-dark);
+    justify-content: space-around;
+    transition: all .4s;
+}
+
+.theme img{
+    width: 50%;
+    height: 50%;
+}
+
+.theme input{
+    position: absolute;
+    width:100%;
+    height:100%;
+    -webkit-appearance: none;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.theme input:checked ~ .box{
+    transform: rotate(180deg);
+}
+
+.theme input:checked ~ .box i{
+    transform: rotate(180deg);
 }
