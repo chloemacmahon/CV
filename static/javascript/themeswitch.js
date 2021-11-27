@@ -20,7 +20,7 @@ themeBtn.addEventListener("click",(e)=>{
                 break;
             case "purple-teal":
                 currentTheme = "";
-                break;
+                break;  
             default:
                 currentTheme = ""
                 break;
