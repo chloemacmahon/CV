@@ -13,6 +13,11 @@ def javaInfo():
 def pythonInfo():
     return render_template("python-info.html")
 
+@app.route("/c-sharp-info")
+def cSharpInfo():
+    return render_template("c-sharp-info.html")
+
+
 @app.route("/interesting")
 def showInteresting():
     return render_template("interesting.html")
